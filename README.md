@@ -7,7 +7,7 @@ docker network create jenkins
 
 docker build -t myjenkins:1.1 .
 
-docker run --name myjenkins --rm --detach
+docker run --name jenkins --rm --detach
   --network jenkins --env DOCKER_HOST=tcp://docker:2376
   --env DOCKER_CERT_PATH=/certs/client --env DOCKER_TLS_VERIFY=1
   --volume jenkins-data:/var/jenkins_home
